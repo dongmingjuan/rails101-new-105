@@ -1,5 +1,6 @@
 <div class="col-md-12">
   <div class="group">
+   <%= link_to("Write a post", new_group_post_path(@group), class: "btn btn-default pull-right")%>
    <% if current_user && current_user == @group.user %>
     <%= link_to("Edit", edit_group_path(@group), class: "btn btn-primary pull-right")%>
    <% end %>
@@ -8,4 +9,17 @@
   <p>
     <%= render_group_description(@group) %>
   </p>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Content</td>
+        <td>Creator</td>
+        <td>Time</td>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render :partial => "post", :collection => @posts, :as => :post %>
+    </tbody>
+  </table>
 </div>
