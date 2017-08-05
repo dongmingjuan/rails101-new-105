@@ -1,0 +1,15 @@
+<div class="col-md-12">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Content</th>
+        <th>更新时间</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render :partial => "post_item", :collection => @posts , :as => :post%>
+    </tbody>
+  </table>
+</div>

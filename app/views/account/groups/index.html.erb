@@ -1,0 +1,16 @@
+<div class="col-md-12">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>文章数量</th>
+        <th>更新时间</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render :partial => "group_item", :collection => @groups , :as => :group%>
+    </tbody>
+  </table>
+</div>
